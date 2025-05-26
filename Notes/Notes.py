@@ -122,4 +122,23 @@ print(num)
 num = list(range(5, 20, 2))
 print(num)
 
+#for Loop
+num = {10, 30, 50, 5, 3}
+sum = 0
+for x in num:
+    print(x)
+    sum = sum + x
+print("sum =",sum)
 
+n = int(input("Enter row number:"))
+for i in range(1, n + 1):
+    print((n - i) * " ", i * "*")
+
+# Guessing Game
+import random
+guessnumber = int(input("Guess your number(1-5):"))
+randomnumber = random.randint(1, 5)
+if guessnumber == randomnumber:
+    print("you won!")
+else:
+    print("you lost!", "random number was", randomnumber)
