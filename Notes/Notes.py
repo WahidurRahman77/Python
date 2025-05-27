@@ -142,3 +142,58 @@ if guessnumber == randomnumber:
     print("you won!")
 else:
     print("you lost!", "random number was", randomnumber)
+
+#List as input from user
+n = input("Enter a text of numbers:")
+list = n.split()
+sum = 0
+for num in list:
+    sum = sum + int(num)
+print(sum)
+
+#Matrix
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+]
+print(matrix)
+
+#Dictionaries
+studentId = {
+    "101" : "Wahidur Rahman",
+    "102" : "nafiz",
+    "103" : "Nola saikat"
+}
+print(studentId["102"])
+print(studentId.get("106", "Not a valid key"))
+
+#Tuples
+students = (
+    "Wahidur Rahman", "Nola saikat", "nafiz"
+)
+print(students)
+
+student = (
+    ("Wahidur Rahman", 21, 2.0),
+    ("Nola saikat", 21, 3.50),
+    ("nafiz", 21, 4.00),
+)
+print(student)
+print(student[1:])
+
+#Set
+num = {1,3,4,5,5}
+print(num)
+
+num2 = set([4,5,6,7])
+print(num2)
+num2.add(8)
+num2.remove(5)
+print(num2)
+print(5 in num2)
+
+num1 = {1,3,4,5}
+num2 = set([4,5,6,7])
+print(num1 | num2)
+print(num1 & num2)
+print(num1 - num2)
