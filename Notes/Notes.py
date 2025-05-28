@@ -197,3 +197,38 @@ num2 = set([4,5,6,7])
 print(num1 | num2)
 print(num1 & num2)
 print(num1 - num2)
+
+# Stack And Queue
+books= []
+books.append("Learn C")
+books.append("Learn C++")
+books.append("Learn Java")
+print(books)
+
+books.pop()
+print(books)
+print("Now the top book is-", books[-1])
+
+books.pop()
+print("Now the top book is-", books[-1])
+
+books.pop()
+if not books:
+    print("Nothing to see here.")
+
+from collections import deque
+bank = deque(["Nola saikat", "BBB", "BBC"])
+bank.popleft()
+print(bank)
+
+if not bank:
+    print("Nothing to see here.")
+
+#Function
+def add (a, b):
+    return a + b
+
+x = int(input())
+y = int(input())
+print(add(x, y))
+
