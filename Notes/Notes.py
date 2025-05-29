@@ -232,3 +232,15 @@ x = int(input())
 y = int(input())
 print(add(x, y))
 
+#xxargs and xxxargs
+def student(*details):
+    print (details)
+
+student(101, "Nola")
+student(101, "Nola", 3.75)
+
+def student(**details):
+    print (details)
+    print(details["name"])
+
+student(ID=101, name="Nola", CGPA=3.75)
