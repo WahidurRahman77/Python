@@ -244,3 +244,24 @@ def student(**details):
     print(details["name"])
 
 student(ID=101, name="Nola", CGPA=3.75)
+
+#Lambda Functions
+print((lambda a,b : a*a + 2*a*b + b*b) (2,3))
+
+#map and filter function
+
+def square(a):
+    return a*a
+num = [1,2,3,4,5,6,7,8,9]
+result = list(map(square, num))
+print(result)
+
+result = list(filter(lambda x: x%2==0, num))
+print(result)
+
+#List Comprehensions
+result = [x*x for x in num]
+print(result)
+result =[x for x in num if x%2==0]
+print(result)
+
