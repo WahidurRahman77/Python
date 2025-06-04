@@ -265,4 +265,45 @@ print(result)
 result =[x for x in num if x%2==0]
 print(result)
 
-#I
+# Zip Function
+roll = [104, 105, 106, 107, 108, 109, 110]
+name = ["nola", "nafiz", "BBB", "BBC", "monkey", "dart irfan", "rivu"]
+print(list(zip(roll, name)))
+
+# Recursion
+def fact (n):
+    if n == 1:
+        return 1
+    else:
+        return n * fact(n - 1)
+print(fact(5))
+
+#Reading a file
+file = open("student.txt", "r")
+
+print(file.readable())
+text = file.read()
+print(text)
+size = len(text)
+print(size)
+file.close()
+
+file = open("student.txt", "r") #list
+text = file.readlines()
+print(text)
+file.close()
+
+file = open("student.txt", "r") #index print
+text = file.readlines()[0]
+print(text)
+file.close()
+
+file = open("student.txt", "r")
+for line in file:
+    print(line)
+file.close()
+
+#writing in a file
+file = open("student.txt", "a")
+file.write("\nNoman - Topper")
+file.close()
