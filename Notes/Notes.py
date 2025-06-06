@@ -308,4 +308,53 @@ file = open("student.txt", "a")
 file.write("\nNoman - Topper")
 file.close()
 
-#
+
+#Exception Handling (part-1)
+try:
+    list = [10, 0, 30]
+    result = list[0] / list[1]
+    print(result)
+    print("Done")
+except ZeroDivisionError:
+    print("Division by zero is not possible")
+
+try:
+    list = [10, 0, 30]
+    result = list[0] / list[3]
+    print(result)
+    print("Done")
+except ZeroDivisionError:
+    print("Division by zero is not possible")
+finally:
+    print("successful")
+
+
+try:
+    num1 = int(input("Enter first number: "))
+    num2 = int(input("Enter second number: "))
+    result = num1 / num2
+    print(result)
+except (ValueError,ZeroDivisionError):
+    print("you have given incorrect input")
+finally:
+    print("Thanks!!!")
+
+
+def voter(age):
+    if age < 18:
+        raise ValueError("Invalid age")
+    return "You are allowed to vote"
+
+try:
+
+    print(voter(17))
+except ValueError as e:
+    print(e)
+
+
+#Swapping
+a = 10
+b = 20
+a, b = b, a
+print("a =", a)
+print("b =", b)
